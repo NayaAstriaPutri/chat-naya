@@ -26,6 +26,9 @@ export default function Home() {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.documentElement.classList.toggle('dark', theme === 'dark');
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute('content', theme === 'dark' ? '#111a2c' : '#b9e2ff');
     }
     if (typeof window !== 'undefined') {
       window.localStorage.setItem('theme', theme);
@@ -110,7 +113,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col w-full bg-gray-50 dark:bg-slate-900" style={{ height: '100dvh' }}>
+    <div className="flex flex-col w-full bg-gradient-to-br from-sky-50 via-[#f7fbff] to-amber-50 dark:from-[#182943] dark:via-[#111a2c] dark:to-[#211d35] transition-colors duration-300" style={{ height: '100dvh' }}>
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main
         className="flex-1 max-w-4xl w-full mx-auto px-4 py-4 flex flex-col"

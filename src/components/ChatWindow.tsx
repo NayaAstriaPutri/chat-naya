@@ -21,19 +21,19 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
   return (
     <div
       ref={scrollContainerRef}
-      className="flex-1 overflow-y-auto space-y-4 pr-4 mb-4 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700"
+      className="flex-1 overflow-y-auto space-y-4 px-1 pr-3 mb-4 scrollbar-thin scrollbar-thumb-sky-200 dark:scrollbar-thumb-slate-700"
     >
       {messages.length === 0 ? (
         <div className="flex items-center justify-center h-full">
           <div className="text-center">
-            <div className="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i className="fas fa-robot text-3xl text-blue-600 dark:text-blue-400"></i>
+            <div className="bg-gradient-to-br from-sky-100 to-amber-100 dark:from-slate-700 dark:to-indigo-900 w-20 h-20 rounded-[1.75rem] flex items-center justify-center mx-auto mb-4 shadow-sm ring-4 ring-white/70 dark:ring-white/5">
+              <i className="fas fa-wand-magic-sparkles text-3xl text-sky-600 dark:text-amber-200"></i>
             </div>
-            <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Selamat datang!</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[#263b5a] dark:text-white">Halo, teman baru! <span aria-hidden="true">✨</span></h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-sm">
-              Halloo.. Saya adalah Sontoloyo AI<br>
-              </br>
-              Anda bisa bertanya tentang apapun terkait informasi yang ada di dalam konten blog saya!
+              Halloo! Saya Naya Ai Asisten.
+              <br />
+              Yuk, tanya apa saja dan kita belajar bersama!
             </p>
           </div>
         </div>
@@ -46,8 +46,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
           >
             <div
               className={`w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0 ${message.role === 'user'
-                ? 'bg-slate-700 dark:bg-slate-600'
-                : 'bg-blue-600 dark:bg-blue-700'
+                ? 'bg-indigo-400 dark:bg-indigo-500'
+                : 'bg-gradient-to-br from-sky-400 to-blue-500 dark:from-sky-500 dark:to-indigo-500'
                 }`}
             >
               <i
@@ -57,8 +57,8 @@ export default function ChatWindow({ messages }: { messages: Message[] }) {
             </div>
             <div
               className={`max-w-[80%] px-4 py-3 rounded-2xl ${message.role === 'user'
-                ? 'bg-blue-600 text-white rounded-tr-none'
-                : 'bg-white dark:bg-slate-800 text-gray-900 dark:text-gray-100 rounded-tl-none border border-gray-200 dark:border-slate-700'
+                ? 'bg-sky-500 dark:bg-sky-600 text-white rounded-tr-none shadow-sm shadow-sky-200/60 dark:shadow-none'
+                : 'bg-white/90 dark:bg-[#1b2941] text-[#263b5a] dark:text-gray-100 rounded-tl-none border border-amber-100 dark:border-slate-700 shadow-sm shadow-sky-100/70 dark:shadow-none'
                 }`}
             >
               <div className="text-sm leading-relaxed whitespace-pre-wrap break-words">

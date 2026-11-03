@@ -52,7 +52,7 @@ export default function ChatInput({
 
 
   return (
-    <div className="border-t border-gray-200 dark:border-slate-800 pt-4">
+    <div className="border-t border-sky-200/80 dark:border-slate-700 pt-4">
       <div className="relative flex items-end gap-3">
         <textarea
           ref={textareaRef}
@@ -61,15 +61,16 @@ export default function ChatInput({
           onKeyDown={handleKeyDown}
           onCompositionStart={() => setIsComposing(true)}
           onCompositionEnd={() => setIsComposing(false)}
-          placeholder="Tanya apa aja, asal jangan tanya kapan kiamat"
+          placeholder="Yuk, tanyakan sesuatu ke Naya..."
           disabled={isLoading}
           rows={1}
-          className="flex-1 p-3 text-sm md:text-base rounded-lg border border-gray-300 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 resize-none max-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-1 p-3 text-sm md:text-base rounded-2xl border border-sky-200 dark:border-slate-600 bg-white/85 dark:bg-[#1b2941] text-[#263b5a] dark:text-gray-100 placeholder-sky-700/60 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:focus:ring-sky-700 resize-none max-h-[120px] disabled:opacity-50 disabled:cursor-not-allowed"
         />
         <button
           onClick={handleSend}
           disabled={!input.trim() || isLoading}
-          className="px-4 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          aria-label="Kirim pesan"
+          className="px-4 py-3 bg-amber-300 hover:bg-amber-400 dark:bg-amber-300 dark:hover:bg-amber-200 text-[#35445e] rounded-2xl transition-colors shadow-sm shadow-amber-200/60 dark:shadow-none disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isLoading ? (
             <i className="fas fa-spinner animate-spin"></i>
@@ -78,8 +79,8 @@ export default function ChatInput({
           )}
         </button>
       </div>
-      <div className="text-xs text-gray-500 dark:text-gray-400 mt-6 text-center space-y-1">
-        <p>“SontoloyoAI is just an AI, so it can make mistakes.”</p>
+      <div className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center space-y-1">
+        <p>Naya Ai Asisten adalah AI dan bisa saja membuat kesalahan.</p>
         <p>© 2026 Hak Cipta Dilindungi.</p>
         <p>
           Developed by{' '}
@@ -87,7 +88,7 @@ export default function ChatInput({
             href="https://adi-muhamad.my.id"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
+            className="text-sky-700 dark:text-sky-300 hover:text-sky-900 dark:hover:text-sky-200 hover:underline transition-colors"
           >
             adi-muhamad.my.id
           </a>

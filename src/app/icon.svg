@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9e7ff"/>
+      <stop offset="1" stop-color="#e4f4ff"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9fbc"/>
+      <stop offset="1" stop-color="#f16f9a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#sky)"/>
+  <circle cx="414" cy="111" r="31" fill="#ffe38a"/>
+  <path d="M92 235c0-94 72-157 165-157s165 63 165 157v85c0 20-16 36-36 36H128c-20 0-36-16-36-36z" fill="url(#hair)"/>
+  <path d="M127 237c0-72 56-125 129-125s129 53 129 125v71c0 67-56 120-129 120s-129-53-129-120z" fill="#fff9f3"/>
+  <path d="m138 122 22-57 43 43M374 122l-22-57-43 43" fill="#ffb5c9" stroke="#f16f9a" stroke-width="16" stroke-linejoin="round"/>
+  <circle cx="204" cy="270" r="13" fill="#35445e"/>
+  <circle cx="308" cy="270" r="13" fill="#35445e"/>
+  <path d="M224 318c17 20 47 20 64 0" fill="none" stroke="#f07891" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="165" cy="305" r="17" fill="#ffc5cf" opacity=".8"/>
+  <circle cx="347" cy="305" r="17" fill="#ffc5cf" opacity=".8"/>
+  <path d="M185 410c18-23 42-35 71-35s53 12 71 35l23 48H162z" fill="#ffe08a"/>
+  <path d="m256 397 11 19 22 4-16 15 3 22-20-10-20 10 3-22-16-15 22-4z" fill="#fff9f3"/>
+  <path d="m94 192 7 12 14 3-10 9 2 14-13-7-12 7 2-14-10-9 14-3z" fill="#fff9f3"/>
+</svg>
